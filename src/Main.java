@@ -1,0 +1,70 @@
+import javax.swing.*;
+import java.awt.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+
+public class Main {
+    public static String timeATM(){return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy,MM,dd HH,mm,ss"));}
+    public static void main(String[] args) {
+        Profile aidan = new Profile("Aidan");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Hey! " + aidan.getName()+ ", wgat it is son!?");
+
+        Task task1 = new Task("bingo");
+
+        /*
+        while(true){
+            System.out.println("Log: l | New Task: t | Fastest Time: f | Exit: x");
+            String input = scanner.nextLine();
+            if(input.equals("l")){ //ALLOWS LOGGING FOR A TASK
+                System.out.println("Which task would you like to log for?");
+                String name = scanner.nextLine();
+                if(!aidan.getTasks().containsKey(name)){
+                    System.out.println("That task doesn't exist!");
+                    continue;
+                }
+                System.out.println("Provide the time for completion");
+                Double time = Double.valueOf((scanner.nextLine()));
+                aidan.logTask(name,time);
+            }else if(input.equals("t")){ //ALLOWS NEW TASK CREATION
+                System.out.println("Name for task?");
+                String newt = scanner.nextLine();
+                aidan.newTask(newt);
+            }else if(input.equals("f")){ //Returns FASTEST time for task
+                System.out.println("FFFFFFFFF");
+            }else if(input.equals("x")){ //EXITS PROGRAM
+                break;
+            }else {System.out.println("Erm guys!?!? that wasnt an option");}
+            System.out.flush();
+            System.out.print("\n");
+        }
+        */
+
+
+
+
+        /*
+        JFrame frame = new JFrame("Hey, I'm Lawggin here!");
+        frame.setSize(400,300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+
+        JPanel logsPanel = new JPanel();
+        JPanel textPanel = new JPanel();
+
+
+        logsPanel.setBackground(Color.ORANGE);
+
+
+        JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, logsPanel, textPanel);
+        splitPane.setDividerLocation(.5);
+
+
+        frame.add(splitPane);
+        frame.setVisible(true);
+        */
+
+    }
+}

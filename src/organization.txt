@@ -1,0 +1,7 @@
+How are the tasks organized?
+Application -> Profile -> taskList
+
+taskList contains all the different tasks the User does
+the tasks are classes themselves which hold the log data.
+
+should the tasks split the (time,duration,desc) into separate arrayLists? or a single arraylist with type arrayList
