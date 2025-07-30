@@ -1,6 +1,10 @@
+import javax.swing.*;
+
 public class Window {
+    public Window(){
+        JFrame window = new JFrame("Hey, I'm Lawggin here!");
+    }
     /*
-        JFrame frame = new JFrame("Hey, I'm Lawggin here!");
         frame.setSize(400,300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);

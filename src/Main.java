@@ -8,9 +8,13 @@ import java.util.Scanner;
 public class Main {
     public static String timeATM(){return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy,MM,dd HH,mm,ss"));}
     public static void main(String[] args) {
-        Profile aidan = new Profile("Aidan");
+
+        App app = new App();
+        app.addProfile("Aidan","Perez");
+
+        Profile aidan = new Profile("Aidan","Perez");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hey! " + aidan.getName()+ ", wgat it is son!?");
+        System.out.println("Hey! " + aidan.getFirst()+ ", wgat it is son!?");
 
 
         while(true){

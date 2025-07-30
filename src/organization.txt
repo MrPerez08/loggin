@@ -5,3 +5,42 @@ taskList contains all the different tasks the User does
 the tasks are classes themselves which hold the log data.
 
 should the tasks split the (time,duration,desc) into separate arrayLists? or a single arraylist with type arrayList
+
+
+
+
+Tasks should pertain to AN INDIVIDUAL, however when in another profile allow suggestions (pulls tasks from other users on device)
+
+Tasks should contain the following:
+    Name of task
+    Date & time
+    duration
+
+
+when a task is created, create a 'window' for it to allow for easy logging
+a task 'window' allows the user to see all the times logged for a particular task
+there is a generic window that allows the user to see ALL logged items, but for ^^^ allow for filtering (use checkboxes)
+
+for daily/just reoccuring items, allow user to just select a checkbox to mark as done (you dont need to time yourself everytime you complete the task yknow)
+
+Calendar window that shows you when you (by day) you did tasks/things (tasks could be highlighted in a certain color which a small rectangle or box of that color is encased in the calendar)
+
+Table view???
+    allows for EASY LOGGING AND TASK CREATION
+    looks like the "monthly ticket" you keep making and the program can grade you weekly/monthly/yearly (really interesting usecase)
+
+
+Profile contains
+    First, Last
+    email
+    pfp? (can add later)
+    bio
+
+
+windows are just TEMPLATES for the profiles (all menus for the profiles should be identical, only the data is changed)
+
+
+Log window, tasklist window SHOULD BE OF SAME TYPE
+(they are subwindows in main frame ‘mainframe 𒅒𒈔𒅒𒇫𒄆👨🏻‍💻’)
+Should be resizeable and selectable through a button toggle on the (top-bar?? A side-bar??)
+Main window with inherited subwindows classes subwindows should be contained WITHIN main window and should have bounding/snapping properties near main window border
