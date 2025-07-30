@@ -19,7 +19,7 @@ public class Profile {
 
     public void newTask(String name){taskList.put(name, new Task(name));}
     public void logTask(String task, Double data){
-        if(taskList.get(task)==null){System.out.println("Task "+task+" not found");} //If task doesnt exist in taskList
+        if(taskList.get(task)==null){System.out.println("Task "+ task +" not found");} //If task doesnt exist in taskList
         else{taskList.get(task).logData(data);}
     }
 

@@ -12,9 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hey! " + aidan.getName()+ ", wgat it is son!?");
 
-        Task task1 = new Task("bingo");
 
-        /*
         while(true){
             System.out.println("Log: l | New Task: t | Fastest Time: f | Exit: x");
             String input = scanner.nextLine();
@@ -25,7 +23,7 @@ public class Main {
                     System.out.println("That task doesn't exist!");
                     continue;
                 }
-                System.out.println("Provide the time for completion");
+                System.out.println("Provide the time for completion   (hh:mm:ss)");
                 Double time = Double.valueOf((scanner.nextLine()));
                 aidan.logTask(name,time);
             }else if(input.equals("t")){ //ALLOWS NEW TASK CREATION
@@ -40,31 +38,6 @@ public class Main {
             System.out.flush();
             System.out.print("\n");
         }
-        */
-
-
-
-
-        /*
-        JFrame frame = new JFrame("Hey, I'm Lawggin here!");
-        frame.setSize(400,300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
-
-        JPanel logsPanel = new JPanel();
-        JPanel textPanel = new JPanel();
-
-
-        logsPanel.setBackground(Color.ORANGE);
-
-
-        JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, logsPanel, textPanel);
-        splitPane.setDividerLocation(.5);
-
-
-        frame.add(splitPane);
-        frame.setVisible(true);
-        */
 
     }
 }
