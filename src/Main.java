@@ -14,9 +14,9 @@ public class Main {
 
         Profile aidan = new Profile("Aidan","Perez");
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Hey! " + aidan.getFirst()+ ", wgat it is son!?");
+        //System.out.println("Hey! " + aidan.getFirst()+ ", wgat it is son!?");
 
-
+        /*
         while(true){
             System.out.println("Log: l | New Task: t | Fastest Time: f | Exit: x");
             String input = scanner.nextLine();
@@ -42,6 +42,6 @@ public class Main {
             System.out.flush();
             System.out.print("\n");
         }
-
+        */
     }
 }
