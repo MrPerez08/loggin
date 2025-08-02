@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 public class Main {
-    public static String timeATM(){return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd | HH:mm:ss"));}
+    public static String timeATM(){return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));}
     public static void main(String[] args) {
 
         App app = new App();
