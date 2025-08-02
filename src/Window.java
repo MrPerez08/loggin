@@ -29,28 +29,49 @@ public class Window {
         logText.setForeground(Color.WHITE);
         logPanel.add(logText);
 
-        JPanel log = new JPanel();
+        JPanel log = new JPanel(new BorderLayout());
         log.setPreferredSize(new Dimension(300,500));
         log.setBackground(Color.decode("#1e2730"));
         JTextArea logArea = new JTextArea();
+        logArea.setBackground(Color.decode("#1e2730"));
+        logArea.setForeground(Color.WHITE);
+        logArea.setOpaque(true);
+        logArea.setLineWrap(true);      // Wrap lines when they exceed width
+        logArea.setWrapStyleWord(true); // Wrap at word boundaries (not mid-word)
         logArea.setEditable(false);
-        log.add(logArea);
+
+        JScrollPane scrollPane = new JScrollPane(logArea);
+        scrollPane.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.decode("#1e2730")));
+
+        log.add(scrollPane, BorderLayout.CENTER);
 
 
 
 
-        JPanel logNew = new JPanel();
+
+        JPanel logNew = new JPanel(new BorderLayout());
         logNew.setBorder(new MatteBorder(2, 0, 0, 0, Color.BLACK));
         logNew.setPreferredSize(new Dimension(300,30));
         logNew.setBackground(Color.decode("#1e2730"));
         JTextField newLogText = new JTextField();
+        newLogText.setForeground(Color.WHITE);
+        newLogText.setBackground(Color.decode("#1e2730"));
+        newLogText.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.decode("#1e2730")));
         logNew.add(newLogText);
+
+        //Okay, how to automate the task creation?
         newLogText.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String input = newLogText.getText();
-                logArea.append(input + "\n");
-                newLogText.setText(""); // Clear the text field
+                String input = newLogText.getText().trim(); // trim() removes leading/trailing whitespace
+                if (!input.isEmpty()) { // Only append if the input is not empty
+
+                    Task newTask = new Task(input);
+
+                    logArea.append(newTask.getCreationTime()+ " | "+ input + " | " + "\n");
+                    newLogText.setText(""); // Clear the text field
+                }
+                // If input is empty, do nothing
             }
         });
 
